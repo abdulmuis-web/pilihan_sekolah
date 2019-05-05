@@ -1,0 +1,6 @@
+entity.pilihan_sekolah.add_form:
+  route_name: entity.pilihan_sekolah.add_form
+  title: 'Add Pilihan sekolah'
+  appears_on:
+    - entity.pilihan_sekolah.collection
+    - entity.pilihan_sekolah.canonical

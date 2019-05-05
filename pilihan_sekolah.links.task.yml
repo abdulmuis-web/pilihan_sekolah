@@ -1,0 +1,22 @@
+# Pilihan sekolah routing definition
+pilihan_sekolah.settings_tab:
+  route_name: pilihan_sekolah.settings
+  title: 'Settings'
+  base_route: pilihan_sekolah.settings
+
+entity.pilihan_sekolah.canonical:
+  route_name: entity.pilihan_sekolah.canonical
+  base_route: entity.pilihan_sekolah.canonical
+  title: 'View'
+
+entity.pilihan_sekolah.edit_form:
+  route_name: entity.pilihan_sekolah.edit_form
+  base_route: entity.pilihan_sekolah.canonical
+  title: 'Edit'
+
+entity.pilihan_sekolah.delete_form:
+  route_name:  entity.pilihan_sekolah.delete_form
+  base_route:  entity.pilihan_sekolah.canonical
+  title: Delete
+  weight: 10
+

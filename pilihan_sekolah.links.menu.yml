@@ -1,0 +1,14 @@
+
+# Pilihan sekolah menu items definition
+entity.pilihan_sekolah.collection:
+  title: 'Pilihan sekolah list'
+  route_name: entity.pilihan_sekolah.collection
+  description: 'List Pilihan sekolah entities'
+  parent: system.admin_structure
+  weight: 100
+
+pilihan_sekolah.admin.structure.settings:
+  title: 'Pilihan sekolah settings'
+  description: 'Configure Pilihan sekolah entities'
+  route_name: pilihan_sekolah.settings
+  parent: system.admin_structure

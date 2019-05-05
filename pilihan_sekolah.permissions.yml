@@ -1,0 +1,19 @@
+add pilihan sekolah entities:
+  title: 'Create new Pilihan sekolah entities'
+
+administer pilihan sekolah entities:
+  title: 'Administer Pilihan sekolah entities'
+  description: 'Allow to access the administration form to configure Pilihan sekolah entities.'
+  restrict access: true
+
+delete pilihan sekolah entities:
+  title: 'Delete Pilihan sekolah entities'
+
+edit pilihan sekolah entities:
+  title: 'Edit Pilihan sekolah entities'
+
+view published pilihan sekolah entities:
+  title: 'View published Pilihan sekolah entities'
+
+view unpublished pilihan sekolah entities:
+  title: 'View unpublished Pilihan sekolah entities'

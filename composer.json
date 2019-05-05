@@ -1,0 +1,14 @@
+{
+  "name": "drupal/pilihan_sekolah",
+  "type": "drupal-module",
+  "description": "Daftar pilihan sekolah",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/pilihan_sekolah",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/pilihan_sekolah",
+    "source": "http://cgit.drupalcode.org/pilihan_sekolah"
+  },
+  "require": { }
+}
