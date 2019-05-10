@@ -27,6 +27,50 @@ class PilihanSekolahForm extends ContentEntityForm {
   /**
    * {@inheritdoc}
    */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    /* @var $entity \Drupal\wilayah_indonesia_province\Entity\Province */		
+	parent::validateForm($form, $form_state);
+
+    $entity = $this->entity;
+	/*
+	if(is_null($entity->id())){
+	  $query = \Drupal::entityQuery('sktm')
+			->range('0', '1');
+	  $or = $query->orConditionGroup();
+	  $or->condition('id', $form_state->getValue('code'));
+	  $or->condition('name', $form_state->getValue('name')[0]['value']);
+	  $query->condition($or);
+	  $id = $query->execute();
+	  if(!empty($id)){
+	    $form_state->setErrorByName('code',"The code or name field already exist");
+	  }
+	}else{
+	  $id = \Drupal::entityQuery('sktm')
+	        ->condition('name', $form_state->getValue('name')[0]['value'])
+			->condition('id', $entity->id(), '!=')
+			->range('0', '1')
+			->execute();
+	  if(!empty($id)){
+	    $form_state->setErrorByName('name',t("The SKTM with name @name already exist", array('@name' => $form_state->getValue('name')[0]['value'])));
+	  }
+	}
+	*/
+	
+	//$desa = $entity->vilage->target_id;
+	//$zona = $entity->zona->target_id;
+	$desa = $form_state->getValue('vilage')[0]['target_id'];
+	$zona = $form_state->getValue('zona')[0]['target_id'];
+	$desa = substr($desa, 0, 4);
+
+    if($desa !== $zona){	
+      $form_state->setErrorByName('sona',t("Desa dan zona tidak sinkron"));
+	}
+  }
+
+
+  /**
+   * {@inheritdoc}
+   */
   public function save(array $form, FormStateInterface $form_state) {
     $entity = $this->entity;
 
