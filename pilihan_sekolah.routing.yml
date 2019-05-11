@@ -1,0 +1,9 @@
+
+pilihan_sekolah.sekolah_generate_form:
+  path: '/pilihan_sekolah/form/sekolah_generate'
+  defaults:
+    _form: '\Drupal\pilihan_sekolah\Form\SekolahGenerateForm'
+    _title: 'SekolahGenerateForm'
+  requirements:
+    _access: 'TRUE'
+  
