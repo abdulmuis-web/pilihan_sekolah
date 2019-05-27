@@ -1,0 +1,146 @@
+@media screen and (max-width:767px) {
+
+  .prodi-sekolah-block-1 table.table{
+    width:100%;
+    table-layout:fixed;
+  }
+  .prodi-sekolah-block-1 table.table th{
+    display:none;
+  }
+  .prodi-sekolah-block-1 table.table td{
+    display:table-row;
+    width: 11em;
+	max-width: 11em;
+    /*border:none !important;*/
+  }
+  .prodi-sekolah-block-1 table.table td:before {
+    font-weight: bold;
+    width: 10em;
+    display: table-cell;
+  }
+  
+  .prodi-sekolah-block-1 table.table td.views-field-counter:before {
+    content: attr(data-th) "No. ";
+  }
+  .prodi-sekolah-block-1 table.table td.views-field-kompetensi-keahlian-id:before {
+    content: attr(data-th) "Jurusan ";
+  }
+  .prodi-sekolah-block-1 table.table td.views-field-kuota:before {
+    content: attr(data-th) "Kuota ";
+  }
+  .prodi-sekolah-block-1 table.table td.views-field-prodi-sekolah:before {
+    content: attr(data-th) "Pendaftar ";
+  }
+  .prodi-sekolah-block-1 table.table td.views-field-skor-total:before {
+    content: attr(data-th) "Skor Tertinggi ";
+  }
+  .prodi-sekolah-block-1 table.table td.views-field-skor-total-1:before {
+    content: attr(data-th) "Skor Terendah ";
+  }
+  .prodi-sekolah-block-1 table.table td.views-field-view-prodi-sekolah:before {
+    content: attr(data-th) "Link ke Prodi/Jurusan ";
+  }
+  
+  
+  .prodi-sekolah-block-1 table.table td.table-title:before,
+  .prodi-sekolah-block-1 table.table td.table-field-project:before{
+    display:none;
+  }
+  .prodi-sekolah-block-1 table.table td:first-child{
+    padding-top:0.75em;
+      font-weight:bold;
+  }
+  .prodi-sekolah-block-1 table.table td:last-child{
+    padding-bottom:0.75em;
+  }
+  .prodi-sekolah-block-1 table.table.views-field tr{
+	background-color:#f9f9f9;
+    border-bottom:1px solid gainsboro;
+    border-top:2px solid #cccccc;
+  }
+  .prodi-sekolah-block-1 table.table.views-field tr td.active{
+    background-color:initial !important;
+  }
+  .prodi-sekolah-block-1 table.table.views-field tr td.table-title{
+    max-width:none;
+  }
+
+
+  .data-pendaftaran-block-2 table.table{
+    width:100%;
+    table-layout:fixed;
+  }
+  .data-pendaftaran-block-2 table.table th{
+    display:none;
+  }
+  .data-pendaftaran-block-2 table.table td{
+    display:table-row;
+    /*border:none !important;*/
+  }
+  .data-pendaftaran-block-2 table.table td {
+    width: 11em;
+  }
+  .data-pendaftaran-block-2 table.table td:before {
+    display: table-cell;
+    font-weight: bold;
+    width: 8em;
+    display: table-cell;
+  }
+  
+  .data-pendaftaran-block-2 table.table td.views-field-counter:before {
+    content: attr(data-th) "No. ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-counter:before {
+    content: attr(data-th) "No. ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-name:before {
+    content: attr(data-th) "NISN : ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-nama-zonasi:before {
+    content: attr(data-th) "Zonasi ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-matematika:before {
+    content: attr(data-th) "matematika ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-ipa:before {
+    content: attr(data-th) "IPA ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-ips:before {
+    content: attr(data-th) "IPS ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-english:before {
+    content: attr(data-th) "B. Inggris ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-indonesia:before {
+    content: attr(data-th) "B. Indonesia ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-nama-jalur-prestasi:before {
+    content: attr(data-th) "Jalur Prestasi ";
+  }
+  .data-pendaftaran-block-2 table.table td.views-field-nama-jalur-sktm:before {
+    content: attr(data-th) "Jalur SKTM ";
+  }
+
+  .data-pendaftaran-block-2 table.table td.table-title:before,
+  .data-pendaftaran-block-2 table.table td.table-field-project:before{
+    display:none;
+  }
+  .data-pendaftaran-block-2 table.table td:first-child{
+    padding-top:0.75em;
+      font-weight:bold;
+  }
+  .data-pendaftaran-block-2 table.table td:last-child{
+    padding-bottom:0.75em;
+  }
+  .data-pendaftaran-block-2 table.table.views-field tr{background-color:#f9f9f9;
+    border-bottom:1px solid gainsboro;
+    border-top:2px solid #cccccc;
+  }
+  .data-pendaftaran-block-2 table.table.views-field tr td.active{
+    background-color:initial !important;
+  }
+  .data-pendaftaran-block-2 table.table.views-field tr td.table-title{
+    max-width:none;
+  }
+
+}

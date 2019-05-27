@@ -11,21 +11,14 @@ class PilihanSekolahGenerate {
     $message = 'Generate pilihan sekolah...';
     $results = array();
     $pilihan_sekolah == 0;
-	
 	foreach ($ids as $id) {
-		
-      //$pilihan_sekolah = PilihanSekolah::create($id);
-      //$results[] = $pilihan_sekolah->save();
-	    $pilihan_sekolah++;
-	    $results[] = $pilihan_sekolah;
-		
 	  $database = \Drupal::database();
       $transaction = $database->startTransaction();
 	  $jenis_sekolah = PilihanSekolahGenerate::getJenisSekolahOptions();
 	  $pid = array();
 	  $pid['name'] = $jenis_sekolah->label() .' '. Lorem::ipsum('2', '2');
 	  $pid['jenis_sekolah'] = $jenis_sekolah->id();
-	  $pid['vilage'] = $id;
+	  $pid['vilage'] = PilihanSekolahGenerate::getVilage($id);
 	  $pid['zona'] = substr($id, '0', '4');
 	  $pid['npsn'] = mt_rand('11111111', '99999999');
 	  
@@ -35,7 +28,7 @@ class PilihanSekolahGenerate {
 	  }
       try {
 		$pilihan_sekolah = PilihanSekolah::create((array)$pid);
-		$pilihan_sekolah->save();
+		$results[] = $pilihan_sekolah->save();
       }
       catch (\Exception $e) {
         $transaction->rollback();
@@ -85,6 +78,15 @@ class PilihanSekolahGenerate {
 		  ->execute();
 	  return (bool)$records;
   }
+  
+  static function getVilage($district_id){
+  
+    $ids = \Drupal::entityQuery('vilage')
+	  ->condition('district_id', $district_id, '=')
+      ->execute();
+	return array_rand($ids);  
+  }
+	  
   
 }
 

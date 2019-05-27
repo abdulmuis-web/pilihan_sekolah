@@ -22,3 +22,14 @@ function pilihan_sekolah_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function pilihan_sekolah_page_attachments(&$page) {
+  $pilihan_sekolah = \Drupal::routeMatch()->getParameter('pilihan_sekolah');
+  if($pilihan_sekolah){
+    $page['#attached']['library'][] = 'pilihan_sekolah/pilihan_sekolah';
+  }
+}

@@ -1,0 +1,5 @@
+pilihan_sekolah:
+  version: 1.x
+  css:
+    theme:
+      css/pilihan_sekolah.css: {}

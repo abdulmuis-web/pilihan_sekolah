@@ -47,13 +47,11 @@ class SekolahGenerateForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $ids = \Drupal::entityQuery('vilage')
-      //->sort('created', 'ASC')
-	  ->range('0','100')
-	  ->groupBy('district_id')
+    $ids = \Drupal::entityQuery('district')
       ->execute();
+
     $batch = array(
-      'title' => t('Deleting Node...'),
+      'title' => t('Generate sekolah...'),
       'operations' => array(
         array(
           '\Drupal\pilihan_sekolah\PilihanSekolahGenerate::generateProcess',
